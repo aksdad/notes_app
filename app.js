@@ -16,16 +16,18 @@ var command = argv._[0];
 console.log('Command: ', command);
 console.log('Yargs', argv);
 
+
+
 if (command == 'add') {
     var note = notes.addNote(argv.title, argv.body);
-    var message = note ? `Note created. Title: ${note.title} Body: ${note.body}` : 'Could not create note.';
+    var message = note ? `Note created.\n${notes.printNote(note)}` : 'Could not create note.';
     console.log(message);
 
 } else if (command === 'list') {
     var allNotes = notes.getAll();
     if (allNotes){
         allNotes.forEach(note => {
-            console.log(`${note.title}\n---\n${note.body}\n`);
+            console.log(notes.printNote(note));
         });
     }else{
         console.log('No notes found');
@@ -33,11 +35,11 @@ if (command == 'add') {
     
 } else if (command === 'read') {
     var note = notes.getNote(argv.title);
-    var message = note ? `${note.title}\n---\n${note.body}` : 'Note not found';
+    var message = note ? notes.printNote(note) : 'Note not found';
     console.log(message);
 } else if (command === 'remove') {
     var noteRemoved = notes.removeNote(argv.title);
-    var message = noteRemoved ? `Removed note: ${argv.title}` : 'Note not removed';
+    var message = noteRemoved ? notes.printNote(note) : 'Note not removed';
     console.log(message);
 
 } else {

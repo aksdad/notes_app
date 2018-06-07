@@ -50,9 +50,14 @@ var removeNote = (title) => {
     return notes.length !== notesWithoutNote.length;
 };
 
+var printNote = (note) => {
+    return `${note.title}\n---\n${note.body}\n`;
+};
+
 module.exports = {
     addNote,
     getAll,
     getNote,
-    removeNote
+    removeNote,
+    printNote
 };
