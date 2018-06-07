@@ -1,0 +1,17 @@
+{
+  "name": "node-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akshay Dadhwal",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "nodemon": "^1.17.4",
+    "yargs": "^11.0.0"
+  }
+}
