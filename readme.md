@@ -1,6 +1,6 @@
 # Simple NodeJS Note Taking App
 
-> This is a project I created just to play around with NodeJS and practice it as well. Its a WIP and more features should be added soon.
+> This is a project created to play around with NodeJS and practice it as well. Its a WIP and more features should be added soon. The notes are stored in the file system.
 
 ## Install
 This project uses node and npm. Go check them out if you don't have them locally installed.
